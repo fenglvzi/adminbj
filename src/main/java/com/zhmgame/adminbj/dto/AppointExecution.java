@@ -4,9 +4,13 @@ import com.zhmgame.adminbj.core.enums.AppointStateEnum;
 import com.zhmgame.adminbj.entity.Appointment;
 
 /**
- * Created by 张译文 on 2017/6/10.
+ *
  */
 public class AppointExecution {
+    public static void main(String[] args) {
+        AppointExecution appointExecution = new AppointExecution(1,AppointStateEnum.REPEAT_APPOINT);
+        System.out.println(appointExecution);
+    }
     private Integer bookId;
     private int state;
     private String stateInfo;

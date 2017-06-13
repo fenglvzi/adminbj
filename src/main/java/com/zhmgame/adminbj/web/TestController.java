@@ -1,6 +1,7 @@
 package com.zhmgame.adminbj.web;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -13,10 +14,9 @@ import javax.servlet.http.HttpSession;
 @RequestMapping("/test")
 @Controller
 public class TestController {
-    @RequestMapping("/ford")
-    public String login(HttpServletRequest request, HttpSession session) {
-        request.setAttribute("msg", "成功使用一次springmvc");
-        System.out.println(request.getContextPath());
+    @RequestMapping("/login")
+    public String login(Model model) throws Exception{
+        model.addAttribute("msg", "这是我第一个mvc");
         return "forward:/WEB-INF/jsp/list.jsp";
     }
 }

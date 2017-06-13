@@ -10,8 +10,10 @@
 	http://www.springframework.org/schema/mvc
 	http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
-<!--1.springmvc 注解模式开启-->
+    <!--1.springmvc 注解模式开启-->
     <mvc:annotation-driven/>
+    <!-- 设置使用注解的类所在的jar包 -->
+    <context:component-scan base-package="com.zhmgame.adminbj"/>
     <!--2.静态资源 默认servlet-->
     <mvc:default-servlet-handler/>
     <!--3.View Resolver-->

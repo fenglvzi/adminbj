@@ -24,3 +24,7 @@ VALUES
   PRIMARY KEY (book_id,student_id),
   index index_appoint_time (appoint_time)
   )ENGINE = innoDB DEFAULT Charset=utf8
+
+UPDATE user
+SET diamond=diamond+#{diamond}
+WHERE user_id=#{userId}

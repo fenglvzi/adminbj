@@ -4,7 +4,7 @@ import com.zhmgame.adminbj.entity.Appointment;
 import org.apache.ibatis.annotations.Param;
 
 /**
- * Created by 张译文 on 2017/6/10.
+ *
  */
 public interface AppointmentDao {
     /**

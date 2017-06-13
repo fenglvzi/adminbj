@@ -33,7 +33,7 @@ public enum AppointStateEnum {
     }
 
     public static void main(String[] args) {
-        AppointStateEnum appointStateEnum = AppointStateEnum.stateOfIndex(-2);
+        AppointStateEnum appointStateEnum = AppointStateEnum.stateOfIndex(1);
         System.out.println(appointStateEnum);
     }
 }

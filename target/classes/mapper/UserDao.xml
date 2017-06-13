@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhmgame.adminbj.dao.UserDao">
+    <!--设置entity类和数据库中表的字段一一对应，注意数据库字段和entity类中的字段名称不致，此处一定要！ -->
+    <resultMap id="BaseResultMap" type="com.zhmgame.adminbj.entity.User">
+        <id column="user_id" property="userId" jdbcType="INTEGER" />
+        <result column="user_name" property="userName" jdbcType="CHAR" />
+     <!--   <result column="USER_PASSWORD" property="userPassword" jdbcType="CHAR" />-->
+        <result column="diamond" property="diamond" jdbcType="INTEGER" />
+    </resultMap>
+    <!--查询操作，拿到用用户的id去查询用户的信息-->
+    <select id="queryById" resultType="User" parameterType="Integer">
+        SELECT user_name,diamond
+        FROM user
+        WHERE user_id=#{userId}
+    </select>
+    <update id="addDiamondById">
+        UPDATE user
+        SET diamond=diamond+#{diamond}
+        WHERE user_id=#{userId}
+    </update>
+<!--    <select id="getCount" resultType="Integer"parameterType="Integer">
+    </select>-->
+</mapper>
